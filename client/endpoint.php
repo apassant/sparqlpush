@@ -1,6 +1,6 @@
 <?php
 
-$challenge = $_GET['hub_challenge]';
+$challenge = $_GET['hub_challenge'];
 
 if($challenge) {
 	// Echo the challenge to confirm subscription
