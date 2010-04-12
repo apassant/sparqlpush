@@ -142,11 +142,14 @@ class SPARQLPuSH {
 		}
 	}
 	
-	// Notify a PuSH hub of an updated feed
-	private function push($rss) {
-		$p = new Publisher(PUSH_HUB_PUBLISH);
-		$res = $p->publish_update($rss);
-	}
+        // Notify a PuSH hub of an updated feed
+        private function push($rss) {
+                $p = new Publisher(PUSH_HUB_PUBLISH);
+                $res = $p->publish_update($rss);
+                if($res) {
+                        echo "<br/>Successfully published $rss to " . PUSH_HUB_PUBLISH;
+                }
+        }
 	
 	private function make_feed($query, $id, $time, $checkdate = null) {
 		// Feed URL
