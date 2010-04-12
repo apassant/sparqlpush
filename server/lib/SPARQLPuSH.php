@@ -146,7 +146,7 @@ class SPARQLPuSH {
         private function push($rss) {
                 $p = new Publisher(PUSH_HUB_PUBLISH);
                 $res = $p->publish_update($rss);
-                if($res) {
+                if($res && DEBUG) {
                         echo "<br/>Successfully published $rss to " . PUSH_HUB_PUBLISH;
                 }
         }
