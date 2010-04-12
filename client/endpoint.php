@@ -1,5 +1,7 @@
 <?php
 
+$challenge = $_GET['hub_challenge]';
+
 if($challenge) {
 	// Echo the challenge to confirm subscription
 	header('HTTP/1.1 200 "Found"', null, 200);
