@@ -1,0 +1,4 @@
+<?php
+
+// Basename of the service - no trailing slash
+define(BASENAME, 'http://example.org/PuSH/client');

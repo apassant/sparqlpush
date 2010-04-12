@@ -1,0 +1,12 @@
+* Copy the 'client' folder somewhere in your Web server
+
+* Copy 'config.php.dist' to 'config.php' and edit accordingly
+
+* Download simplepie (http://simplepie.org/) and install it in a folder
+	named 'simplepie' in the 'client' one
+
+* Create a file name 'feed' and give it read access from your webserver 
+
+* Go to 'register.php' and register a query at a particular sparqlPuSH service
+
+* Once registered, updates will be pushed to your endpoint and can be observed at 'index.php'

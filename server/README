@@ -1,0 +1,12 @@
+* Copy the 'server' folder somewhere in your Web server
+
+* Copy 'config.php.dist' to 'config.php' and edit accordingly
+
+* If you want to use it with the ARC2 backend, download arc2 (http://arc.semsol.org/) and install it in a folder
+	named 'arc' in the 'server' one
+
+* Create a directory name 'feed' and give it read access from your webserver 
+
+* Go to 'index.php' and start registering some queries
+
+* To LOAD data via the interface (and launch the triggers) you can HTTP POST files to /?post=1 
