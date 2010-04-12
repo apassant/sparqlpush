@@ -5,7 +5,9 @@
 * If you want to use it with the ARC2 backend, download arc2 (http://arc.semsol.org/) and install it in a folder
 	named 'arc' in the 'server' one
 
-* Create a directory name 'feed' and give it read access from your webserver 
+* Give your webserver read-writed to the 'feed' directory
+
+* Depending on your type of feeds, you may want to adjust 'feed/.htaccess'
 
 * Go to 'index.php' and start registering some queries
 
