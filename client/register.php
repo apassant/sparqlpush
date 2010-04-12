@@ -20,7 +20,7 @@ if($query) {
 	$urls = $feed->get_links('self');
 	$url = $urls[0];
 	// Subscribe
-	$s = new Subscriber($hub, BASENAME."/endpoint.php");
+	$s = new Subscriber($hub.'subscribe', BASENAME."/endpoint.php");
 	$s->subscribe($url);
 
 // Display the form
