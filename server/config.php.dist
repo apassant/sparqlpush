@@ -5,7 +5,7 @@ define(BASENAME, 'http://example.org/PuSH/server');
 
 // PuSH Hub used to broadcast the feeds
 define(PUSH_HUB, 'http://pubsubhubbub.appspot.com/');
-define(PUSH_HUB_PUBLISH, 'http://pubsubhubbub.appspot.com/publisher');
+define(PUSH_HUB_PUBLISH, 'http://pubsubhubbub.appspot.com/publish');
 
 // Type of feed 
 // Current choices are 'rss2' or 'atom'
