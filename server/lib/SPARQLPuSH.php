@@ -76,12 +76,12 @@ class SPARQLPuSH {
 		$rss = $this->make_feed($query, $id, $time);		
 		// if OK
 		if($rss) {
-			// Subscribe
-			$this->push($rss);
 			// Register
 			$date = date('c', $time);
 			$insert = "INSERT INTO <".BASENAME."/feeds> { <$rss> <http://ex/has_query> \"$enc\" ; dc:date \"$date\" . } ";
-			return $this->connector->query($insert);
+			$this->connector->query($insert);
+			// Subscribe
+			return $this->push($rss);
 		} else {
 			return null;
 		} 
@@ -149,6 +149,7 @@ class SPARQLPuSH {
 		if($res && DEBUG) {
 			echo "<br/>Successfully published $rss to " . PUSH_HUB_PUBLISH;
 		}
+		return $res;
 	}
 	
 	private function make_feed($query, $id, $time, $checkdate = null) {
