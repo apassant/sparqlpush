@@ -17,7 +17,7 @@ if($query) {
 	// Retrieve info
 	$hubs = $feed->get_links('hub');
 	$hub = $hubs[0];
-	$urls = $feed->get_links();
+	$urls = $feed->get_links('self');
 	$url = $urls[0];
 	// Subscribe
 	$s = new Subscriber($hub, BASENAME."/endpoint.php");
