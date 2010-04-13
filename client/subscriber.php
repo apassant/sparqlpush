@@ -73,7 +73,8 @@ class Subscriber {
         $post_string .= "&hub.callback=".urlencode($this->callback_url);
         $post_string .= "&hub.verify=".$this->verify;
         $post_string .= "&hub.verify_token=".$this->verify_token;
-        $post_string .= "&hub.lease_seconds=".$this->lease_seconds;
+        // Do not work propetly with that parameter
+        // $post_string .= "&hub.lease_seconds=".$this->lease_seconds;
     
         // append the topic url parameters
         $post_string .= "&hub.topic=".urlencode($topic_url);
