@@ -22,6 +22,9 @@ if($query) {
 	// Subscribe
 	$s = new Subscriber($hub.'subscribe', BASENAME."/endpoint.php");
 	$s->subscribe($url);
+	if($s) {
+		echo "Successfully registered $url to ${hub}subscribe with callback ".BASENAME."/endpoint.php";
+	}
 
 // Display the form
 } else {
