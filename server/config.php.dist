@@ -16,9 +16,17 @@ define(FEED, 'atom');
 define(CONNECTOR, 'ARC2');
 
 // Edit if CONNECTOR == 'SPARQL'
-define(SPARQL, '');
+// Key might be required depends on your SPARUL configuration
+define(SPARQL_ENDPOINT, 'http://example.org/sparql/');
+// Aditional parameters to be passed to the endpoint using POST
+define(SPARQL_QUERY, 'query=');
+// Must return JSON
+define(SPARQL_JSON, 'output=json');
+// For endpoint requiring a key
+define(SPARQL_KEY, 'key=foo');
 
 // Edit if CONNECTOR == 'ARC2'
+// You'll also need to download ARC2
 define(DB_HOST, 'localhost');
 define(DB_NAME, '');
 define(DB_USER, '');

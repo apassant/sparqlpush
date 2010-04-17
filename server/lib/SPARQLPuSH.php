@@ -5,7 +5,7 @@ include_once('./arc/ARC2.php');
 include_once(dirname(__FILE__).'/Publisher.php');
 include_once(dirname(__FILE__).'/SPARQLPuSHFeeds.php');
 include_once(dirname(__FILE__).'/SPARQLPuSHTemplate.php');
-include_once(dirname(__FILE__).'/SPARQLPuSHConnectorARC2.php');
+include_once(dirname(__FILE__).'/SPARQLPuSHConnector.php');
 
 class SPARQLPuSH {
 	
@@ -13,8 +13,10 @@ class SPARQLPuSH {
 	
 	public function __construct() {
 		if(CONNECTOR == 'ARC2') {
+			include_once(dirname(__FILE__).'/SPARQLPuSHConnectorARC2.php');
 			$this->connector = new SPARQLPuSHConnectorARC2();
 		} elseif (CONNECTOR == 'SPARQL') {
+			include_once(dirname(__FILE__).'/SPARQLPuSHConnectorSPARQL.php');
 			$this->connector = new SPARQLPuSHConnectorSPARQL();
 		}
 	}
