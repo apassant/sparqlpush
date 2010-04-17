@@ -1,7 +1,5 @@
 <?php
 
-include_once('./arc/ARC2.php');
-
 include_once(dirname(__FILE__).'/Publisher.php');
 include_once(dirname(__FILE__).'/SPARQLPuSHFeeds.php');
 include_once(dirname(__FILE__).'/SPARQLPuSHTemplate.php');
